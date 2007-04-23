@@ -1,6 +1,6 @@
 %define module  Apache-DBI
 %define name    perl-%{module}
-%define version 1.05
+%define version 1.06
 %define release %mkrel 1
 
 Name:           %{name}
