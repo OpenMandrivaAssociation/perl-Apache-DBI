@@ -1,12 +1,9 @@
 %define module  Apache-DBI
-%define name    perl-%{module}
-%define version 1.06
-%define release %mkrel 1
 
-Name:           %{name}
-Version:        %{version}
-Release:        %{release}
 Summary:        Initiate a persistent database connection
+Name:           perl-%{module}
+Version:        1.06
+Release:        %mkrel 3
 License:        GPL or Artistic
 Group:          Development/Perl
 URL:            http://search.cpan.org/dist/%{module}
@@ -43,6 +40,3 @@ rm -rf %{buildroot}
 %doc README Changes
 %{perl_vendorlib}/Apache
 %{_mandir}/*/*
-
-
-
