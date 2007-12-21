@@ -13,6 +13,7 @@ BuildRequires:  perl-devel
 %endif
 BuildRequires:  perl(DBD::mysql)
 BuildArch:      noarch
+BuildRoot:      %{_tmppath}/%{name}-%{version}
 
 %description
 This module initiates a persistent database connection.
