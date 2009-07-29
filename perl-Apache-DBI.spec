@@ -1,25 +1,28 @@
-%define module  Apache-DBI
+%define upstream_name    Apache-DBI
+%define upstream_version 1.07
+
+Name:       perl-%{upstream_name}
+Version:    %perl_convert_version %{upstream_version}
+Release:    %mkrel 1
 
 Summary:        Initiate a persistent database connection
-Name:           perl-%{module}
-Version:        1.07
-Release:        %mkrel 2
-License:        GPL or Artistic
+License:        GPL+ or Artistic
 Group:          Development/Perl
-URL:            http://search.cpan.org/dist/%{module}
-Source:         http://www.cpan.org/modules/by-module/Apache/%{module}-%{version}.tar.bz2
+Url:            http://search.cpan.org/dist/%{upstream_name}
+Source0:        http://www.cpan.org/modules/by-module/Apache/%{upstream_name}-%{upstream_version}.tar.bz2
+
 %if %{mdkversion} < 1010
 BuildRequires:  perl-devel
 %endif
 BuildRequires:  perl(DBD::mysql)
 BuildArch:      noarch
-BuildRoot:      %{_tmppath}/%{name}-%{version}
+BuildRoot:      %{_tmppath}/%{name}-%{version}-%{release}
 
 %description
 This module initiates a persistent database connection.
 
 %prep
-%setup -q -n %{module}-%{version}
+%setup -q -n %{upstream_name}-%{upstream_version}
 
 %build
 %{__perl} Makefile.PL INSTALLDIRS=vendor
