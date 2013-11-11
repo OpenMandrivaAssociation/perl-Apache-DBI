@@ -1,2 +1,4 @@
+removed_sources:
+  Apache-DBI-1.10.tar.gz: e51e86d8d3450deffa66c69abb5f2036570d4f2b
 sources:
-  "Apache-DBI-1.10.tar.gz": e51e86d8d3450deffa66c69abb5f2036570d4f2b
+  Apache-DBI-1.12.tar.gz: c933c335208181753ef16dc611889c70731dd097

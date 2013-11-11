@@ -1,15 +1,15 @@
 %define upstream_name    Apache-DBI
-%define upstream_version 1.10
+%define upstream_version 1.12
 
 Name:		perl-%{upstream_name}
 Version:	%perl_convert_version %{upstream_version}
-Release:	2
+Release:	1
 
 Summary:	Initiate a persistent database connection
 License:	GPL+ or Artistic
 Group:		Development/Perl
 Url:		http://search.cpan.org/dist/%{upstream_name}
-Source0:	http://www.cpan.org/modules/by-module/Apache/%{upstream_name}-%{upstream_version}.tar.gz
+Source0:	http://www.cpan.org/modules/by-module/Apache/Apache-DBI-%{upstream_version}.tar.gz
 
 BuildRequires:	perl-devel
 BuildRequires:	perl(DBD::mysql)
@@ -125,4 +125,5 @@ make test
 
 * Mon Dec 08 2003 Guillaume Rousse <guillomovitch@mandrake.org> 0.92-1mdk
 - first mdk release
+
 
