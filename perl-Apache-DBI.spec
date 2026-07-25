@@ -2,14 +2,14 @@
 %define upstream_version 1.12
 
 Name:		perl-%{upstream_name}
-Version:	%perl_convert_version %{upstream_version}
-Release:	3
+Version:	%{upstream_version}
+Release:	4
 
 Summary:	Initiate a persistent database connection
 License:	GPL+ or Artistic
 Group:		Development/Perl
-Url:		https://search.cpan.org/dist/%{upstream_name}
-Source0:	http://www.cpan.org/modules/by-module/Apache/Apache-DBI-%{upstream_version}.tar.gz
+Url:		https://metacpan.org/dist/Apache-DBI
+Source0:	https://cpan.metacpan.org/authors/id/P/PH/PHRED/Apache-DBI-%{upstream_version}.tar.gz
 
 BuildRequires:	make
 BuildRequires:	perl-devel
