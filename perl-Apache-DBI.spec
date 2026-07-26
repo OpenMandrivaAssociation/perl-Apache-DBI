@@ -1,15 +1,13 @@
 %define upstream_name    Apache-DBI
-%define upstream_version 1.12
-
 Name:		perl-%{upstream_name}
-Version:	%{upstream_version}
-Release:	4
+Version:	1.12
+Release:	5
 
 Summary:	Initiate a persistent database connection
 License:	GPL+ or Artistic
 Group:		Development/Perl
 Url:		https://metacpan.org/dist/Apache-DBI
-Source0:	https://cpan.metacpan.org/authors/id/P/PH/PHRED/Apache-DBI-%{upstream_version}.tar.gz
+Source0:	https://cpan.metacpan.org/authors/id/P/PH/PHRED/Apache-DBI-%{version}.tar.gz
 
 BuildRequires:	make
 BuildRequires:	perl-devel
@@ -21,7 +19,7 @@ BuildArch:	noarch
 This module initiates a persistent database connection.
 
 %prep
-%setup -q -n %{upstream_name}-%{upstream_version}
+%setup -q -n %{upstream_name}-%{version}
 
 %build
 perl Makefile.PL INSTALLDIRS=vendor
@@ -54,9 +52,7 @@ make test
 
 * Wed Jul 29 2009 JÃ©rÃ´me Quelin <jquelin@mandriva.org> 1.70.0-1mdv2010.0
 + Revision: 402964
-- rebuild using %%perl_convert_version
-
-* Fri Aug 08 2008 Thierry Vignaud <tv@mandriva.org> 1.07-2mdv2009.0
+- rebuild using %1.12 Fri Aug 08 2008 Thierry Vignaud <tv@mandriva.org> 1.07-2mdv2009.0
 + Revision: 268366
 - rebuild early 2009.0 package (before pixel changes)
 
